@@ -3,7 +3,6 @@ const { nodeExternalsPlugin } = require('esbuild-node-externals');
 
 const isDev = process.argv.some((a) => a === '--dev');
 
-
 build({
   entryPoints: ['src/index.ts'],
   platform: 'node',
