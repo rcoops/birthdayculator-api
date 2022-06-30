@@ -1,0 +1,19 @@
+{
+  "version": "20.0.0",
+  "files": {
+    "a5b6a76a72b2dec94b6a129e6617d57f354628f595cfe51b07d2e2aaf17b632d": {
+      "source": {
+        "path": "BirthdayculatorApiStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "a5b6a76a72b2dec94b6a129e6617d57f354628f595cfe51b07d2e2aaf17b632d.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

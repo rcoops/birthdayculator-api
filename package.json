@@ -1,16 +1,34 @@
 {
   "name": "birthdayculator-api",
   "version": "1.0.0",
+  "scripts": {
+    "build": "rimraf dist && node build.js",
+    "watch": "rimraf dist && node build.js --dev",
+    "test": "jest",
+    "lint": "eslint --ext .ts . && prettier . -c",
+    "format": "eslint --ext .ts . --fix && prettier . -w",
+    "cdk": "cdk",
+    "prepare": "husky install"
+  },
   "bin": {
     "birthdayculator-api": "bin/birthdayculator-api.js"
   },
-  "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
-    "test": "jest",
-    "cdk": "cdk"
+  "keywords": [
+    "age",
+    "birthday",
+    "birth-date"
+  ],
+  "author": "Rick Cooper <rcoops84@hotmail.com>",
+  "repository": {
+    "url": "https://github.com/rcoops/birthdayculator-api"
   },
+  "bugs": {
+    "url": "https://github.com/rcoops/birthdayculator-api/issues"
+  },
+  "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
     "@types/jest": "^28.1.4",
     "@types/node": "18.0.0",
     "@types/prettier": "2.6.3",
@@ -27,7 +45,6 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^8.0.1",
     "jest": "^28.1.2",
-    "npm-dts": "^1.3.12",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",
